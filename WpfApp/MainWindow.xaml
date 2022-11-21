@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="Kundorder" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Grid.Column="0" Margin="20">
+            <StackPanel>
+                <TextBlock Text="Kund" Margin="0 0 0 5" />
+                <ComboBox Name="cb_customer" DisplayMemberPath="Key" Padding="5" Margin="0 0 0 15" />
+                <TextBlock Text="Produkt" Margin="0 0 0 5"/>
+                <ComboBox Name="cb_product" DisplayMemberPath="Key" Padding="5" Margin="0 0 0 20" />
+                <Button Name="btn_Add_Product_To_List" Click="btn_Add_Product_To_List_Click" Content="Lägg till produkt" FontWeight="Bold" Padding="5" />
+                <Button Name="btn_Save_Order" Click="btn_Save_Order_Click"  Content="Spara Order" FontWeight="Bold" Margin="0 50 0 0" Padding="5" />
+            </StackPanel>
+        </Grid>
+
+
+        <Grid Grid.Column="1" Margin="20">
+            <ListView Name="lv_OrderRows"></ListView>
+        </Grid>
+
+
+
+
+    </Grid>
+</Window>
